@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Steganography</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Advanced Image Steganography</h1>
+        <p>Conceal. Encrypt. Reveal.</p>
+    </header>
+
+    <main>
+        <nav>
+            <button id="encode-tab" class="active">Encode</button>
+            <button id="decode-tab">Decode</button>
+            <button id="about-tab">About</button>
+        </nav>
+
+        <div id="encode-section" class="content-section active">
+            <h2>How to Encode Secret Messages</h2>
+            <ol>
+                <li>
+                    <h3>Choose Your Image:</h3>
+                    <p>Upload PNG, JPG, JPEG, BMP, or GIF. Larger images more capacity!</p>
+                    <div class="upload-area" id="encode-upload-area">
+                        <p>Drag and drop an image file, or click to browse</p>
+                        <input type="file" id="encode-image-input" accept="image/*" hidden>
+                    </div>
+                </li>
+                <li>
+                    <h3>Write Your Secret:</h3>
+                    <p>Type any message - text, passwords, or data</p>
+                    <textarea id="secret-message-input" placeholder="Type your secret message here..."></textarea>
+                </li>
+                <li>
+                    <h3>Add Security:</h3>
+                    <p>Toggle encryption ON and set a strong password</p>
+                    <label>
+                        <input type="checkbox" id="enable-encryption"> Enable Encryption
+                    </label>
+                    <input type="password" id="encode-password-input" placeholder="Enter password (optional)" disabled>
+                </li>
+            </ol>
+            <button id="encode-button">Encode Image</button>
+            <div id="encoded-image-output" style="display: none;">
+                <h3>Generate & Download:</h3>
+                <p>Get a visually identical image with your hidden message</p>
+                <a id="download-link" download="encoded-image.png">Download Encoded Image</a>
+            </div>
+        </div>
+
+        <div id="decode-section" class="content-section">
+            <h2>How to Decode Hidden Messages</h2>
+            <ol>
+                <li>
+                    <h3>Upload Image:</h3>
+                    <p>Select an image that contains a secret message</p>
+                    <div class="upload-area" id="decode-upload-area">
+                        <p>Drag and drop an image file, or click to browse</p>
+                        <input type="file" id="decode-image-input" accept="image/*" hidden>
+                    </div>
+                </li>
+                <li>
+                    <h3>Enter Password:</h3>
+                    <p>If encrypted, you'll be prompted for the password</p>
+                    <input type="password" id="decode-password-input" placeholder="Enter password">
+                </li>
+            </ol>
+            <button id="decode-button">Decode Image</button>
+            <div id="decoded-message-output" style="display: none;">
+                <h3>Access Secret:</h3>
+                <p>Copy the revealed message or save it securely</p>
+                <textarea id="decoded-message-display" readonly></textarea>
+            </div>
+        </div>
+
+        <div id="about-section" class="content-section">
+            <h2>What is Steganography?</h2>
+            <p>Steganography is the ancient art of hiding information in plain sight. Unlike encryption which scrambles data, steganography conceals the very existence of secret messages by embedding them within ordinary-looking files like images..</p>
+            <h3>How Our Technology Works</h3>
+            <p>A deep dive into the technical implementation...</p>
+            <h3>A Brief History</h3>
+            <p>Steganography dates back to 440 BC when Histiaeus tattooed a message on his slave's scalp, let the hair grow back, and sent him as a messenger. During WWII, spies used invisible ink and microdots.
+                Today's digital steganography leverages the complexity of digital media files. Our implementation follows modern cryptographic standards while maintaining the time-tested principle of security through obscurity, backed by mathematics</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>built with <span>&hearts;</span> for <span>&nbsp;</span> by Abu Zar Mishwani</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
