@@ -1,94 +1,156 @@
 body {
-    font-family: sans-serif;
-    background-color: #f0f2f5;
     margin: 0;
-    padding: 0;
-    color: #333;
-}
+    font-family: 'Fira Code', monospace;
+    background: #f9fafa url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40"><rect width="40" height="40" fill="none" stroke="%23e8ecef"/></svg>');
+    color: #1c1c1c;
+  }
 
-header {
-    background-color: #fff;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 20px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-}
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+  }
 
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+  .logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
 
-nav {
+  .logo i {
+    color: #00ffd1;
+    margin-right: 0.5rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+    margin-top: -10px;
+  }
+
+  .tabs {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-}
+    margin: 30px 0;
+  }
 
-nav button {
-    background-color: #eee;
+  .tab-button {
+    padding: 12px 30px;
     border: none;
-    padding: 10px 20px;
-    margin: 0 5px;
+    background: #eee;
+    font-family: inherit;
+    font-size: 1rem;
     cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-    transition: background-color 0.3s;
-}
+  }
 
-nav button.active {
-    background-color: #007bff;
-    color: white;
-}
+  .tab-button.active {
+    background: #00ffd1;
+    color: black;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
 
-.content-section {
-    display: none;
-}
+  .card {
+    background: linear-gradient(145deg, #f9fafa, #edf1f5);
+    border: 1px solid #e0e4e7;
+    border-radius: 12px;
+    padding: 30px;
+    width: 80%;
+    margin: 0 auto 30px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.03);
+  }
 
-.content-section.active {
-    display: block;
-}
+  .card h3 {
+    font-weight: 700;
+  }
 
-.upload-area {
-    border: 2px dashed #ccc;
+  .card ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .card li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .tip {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fff;
     border-radius: 8px;
+    font-size: 0.9rem;
+  }
+
+  .section {
+    width: 80%;
+    margin: 0 auto 40px;
+  }
+
+  .section h3 i {
+    margin-right: 10px;
+    color: #00ffd1;
+  }
+
+  .upload-box {
+    border: 2px dashed #d1d5db;
+    border-radius: 12px;
     padding: 40px;
     text-align: center;
-    cursor: pointer;
-    margin: 15px 0;
-    transition: border-color 0.3s;
-}
+    margin-top: 20px;
+    background: white;
+  }
 
-.upload-area:hover {
-    border-color: #007bff;
-}
-
-textarea, input[type="password"] {
+  .textarea {
     width: 100%;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
+    height: 100px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    resize: none;
+  }
 
-button {
-    background-color: #28a745;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
+  .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 10px;
-}
+  }
 
-button:hover {
-    background-color: #218838;
-}
-footer {
+  .btn-primary {
+    background: #6a93f8;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    cursor: pointer;
+  }
+
+  .btn-secondary {
+    padding: 10px 25px;
+    background: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  footer {
     text-align: center;
-}
+    padding: 30px;
+    font-size: 0.9rem;
+    color: #6b7280;
+  }
+
+  footer i {
+    color: #3182ce;
+  }
